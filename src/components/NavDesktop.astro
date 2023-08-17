@@ -1,0 +1,23 @@
+---
+import { navLinks } from '@constants/index';
+import Button from '@components/Button.astro';
+---
+
+<nav class="hidden md:block">
+  <ul class="flex gap-[46px] items-center">
+    {
+      navLinks.map((link) => (
+        <li class="uppercase text-[12.8px] tracking-[1.6px] text-black hover:text-primary-red transition-colors cursor-pointer">
+          {link}
+        </li>
+      ))
+    }
+    <Button
+      text="Login"
+      color="bg-primary-red text-white hover:text-primary-red border-primary-red"
+      height="h-[40px]"
+      width="w-[111px]"
+      textStyles="uppercase text-[13px] tracking-[1.7px]"
+    />
+  </ul>
+</nav>
