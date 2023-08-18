@@ -11,10 +11,12 @@ import Footer from '../components/Footer.astro';
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="px-[26px]">
-    <Navbar />
-    <slot />
-    <Footer />
+  <body class="px-[26px] max-w-[1440px] mx-auto">
+    <div>
+      <Navbar />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
 

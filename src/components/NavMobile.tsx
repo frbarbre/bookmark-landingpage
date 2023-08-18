@@ -22,6 +22,7 @@ export default function NavMobile() {
               <ul className="w-full">
                 {navLinks.map((link, index) => (
                   <li
+                    key={link}
                     className={`h-[65px] border-white/20 border-t-[2px] flex justify-center items-center uppercase text-white text-[20px] tracking-[2.3px] ${
                       index === navLinks.length - 1 && 'border-b-[2px]'
                     }`}
@@ -29,7 +30,9 @@ export default function NavMobile() {
                     {link}
                   </li>
                 ))}
-                <button className='mt-[24px] w-full border-[3px] rounded-[4px] text-white font-medium h-[48px] text-[20px] tracking-[2.3px] uppercase'>Login</button>
+                <button className="mt-[24px] w-full border-[3px] rounded-[4px] text-white font-medium h-[48px] text-[20px] tracking-[2.3px] uppercase">
+                  Login
+                </button>
               </ul>
             </section>
 

@@ -11,6 +11,10 @@ module.exports = {
         'neutral-blue': 'hsl(229, 31%, 21%)',
       },
     },
+    screens: {
+      md: "975px",
+      lg: "1440px"
+    }
   },
   plugins: [],
 };

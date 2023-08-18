@@ -1,0 +1,46 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="relative">
+  <section
+    class="max-w-[1162px] mx-auto flex flex-col md:flex-row-reverse items-center md:justify-between gap-y-[36px]"
+  >
+    <img
+      src="/illustration-hero.svg"
+      alt="hero-picture"
+      class="w-full max-w-[580px] lg:translate-x-[100px]"
+    />
+    <article
+      class="max-w-[438px] text-center md:text-left gap-[24px] flex flex-col"
+    >
+      <h1
+        class="text-[25px] tracking-[-0.372px] leading-[32.3px] text-neutral-blue font-medium md:text-[47px] md:tracking-[0px] md:leading-[51.7px]"
+      >
+        A Simple Bookmark Manager
+      </h1>
+      <p
+        class="text-neutral-gray text-[12px] tracking-[-0.12px] leading-[20px] md:text-[18.5px] md:leading-[27px] md:tracking-[-0.185px]"
+      >
+        A clean and simple interface to organize your favourite websites. Open a
+        new browser tab and see your sites load instantly. Try it for free.
+      </p>
+      <div
+        class="flex gap-[11px] md:gap-[16px] justify-center md:justify-start"
+      >
+        <Button
+          text="Get it on Chrome"
+          color="bg-primary-blue border-primary-blue hover:text-primary-blue text-white"
+        />
+        <Button
+          text="Get it on Firefox"
+          color="bg-white border-white hover:border-neutral-blue text-neutral-blue"
+        />
+      </div>
+    </article>
+  </section>
+  <div
+    class="h-[175px] md:h-[353px] rounded-l-full absolute bg-primary-blue right-[-26px] top-[30%] md:top-[50%] translate-y-[-50%] max-w-[325px] md:max-w-[500px] w-full z-[-1]"
+  >
+  </div>
+</section>
