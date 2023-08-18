@@ -1,0 +1,15 @@
+---
+import Paragraph from "./Paragraph";
+import Title from "./Title";
+import FeatureContainer from "./FeatureContainer";
+---
+
+<section class="pt-[126px] md:pt-[193px]">
+  <article class="flex flex-col md:gap-[36px] gap-[20px]">
+    <Title title="Features" />
+    <Paragraph
+      text={"Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go."}
+    />
+  </article>
+  <FeatureContainer client:visible />
+</section>

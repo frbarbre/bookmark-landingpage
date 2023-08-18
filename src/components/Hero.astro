@@ -1,5 +1,6 @@
 ---
-import Button from './Button.astro';
+import Button from "./Button";
+import Paragraph from "./Paragraph";
 ---
 
 <section class="relative">
@@ -19,12 +20,10 @@ import Button from './Button.astro';
       >
         A Simple Bookmark Manager
       </h1>
-      <p
-        class="text-neutral-gray text-[12px] tracking-[-0.12px] leading-[20px] md:text-[18.5px] md:leading-[27px] md:tracking-[-0.185px]"
-      >
-        A clean and simple interface to organize your favourite websites. Open a
-        new browser tab and see your sites load instantly. Try it for free.
-      </p>
+      <Paragraph
+        text=" A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free."
+        textAlign="text-center md:text-left"
+      />
       <div
         class="flex flex-wrap gap-[11px] md:gap-[16px] justify-center md:justify-start"
       >
@@ -40,7 +39,7 @@ import Button from './Button.astro';
     </article>
   </section>
   <div
-    class="h-[175px] md:h-[353px] rounded-l-full absolute bg-primary-blue right-[-26px] top-[20%] sm:top-[30%] md:top-[50%] translate-y-[-50%] max-w-[325px] md:max-w-[500px] w-full z-[-1]"
+    class="h-[175px] md:h-[353px] rounded-l-full absolute bg-primary-blue right-[-26px] top-[20%] sm:top-[30%] md:top-[62%] translate-y-[-50%] max-w-[325px] md:max-w-[500px] w-full z-[-1]"
   >
   </div>
 </section>

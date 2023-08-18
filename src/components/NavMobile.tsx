@@ -1,20 +1,20 @@
-import { navLinks } from '@constants/index';
-import { useState } from 'react';
+import { navLinks } from "@constants/index";
+import { useState } from "react";
 
 export default function NavMobile() {
   const [active, setActive] = useState(false);
 
   return (
     <article className="md:hidden">
-      <img src={'/icon-hamburger.svg'} alt="" onClick={() => setActive(true)} />
+      <img src={"/icon-hamburger.svg"} alt="" onClick={() => setActive(true)} />
       {active && (
         <>
-          <nav className="bg-neutral-blue/90 fixed inset-0 py-[32px] px-[26px] flex flex-col justify-between z-10">
-            <section className="flex items-center justify-between flex-col gap-[40px]">
-              <div className="flex items-center justify-between w-full">
+          <nav className="fixed inset-0 z-10 flex flex-col justify-between bg-neutral-blue/90 px-[26px] py-[32px]">
+            <section className="flex flex-col items-center justify-between gap-[40px]">
+              <div className="flex w-full items-center justify-between">
                 <img src="/logo-white.svg" alt="logo" />
                 <img
-                  src={'/icon-close.svg'}
+                  src={"/icon-close.svg"}
                   alt=""
                   onClick={() => setActive(false)}
                 />
@@ -23,25 +23,25 @@ export default function NavMobile() {
                 {navLinks.map((link, index) => (
                   <li
                     key={link}
-                    className={`h-[65px] border-white/20 border-t-[2px] flex justify-center items-center uppercase text-white text-[20px] tracking-[2.3px] ${
-                      index === navLinks.length - 1 && 'border-b-[2px]'
+                    className={`flex h-[65px] items-center justify-center border-t-[2px] border-white/20 text-[20px] uppercase tracking-[2.3px] text-white ${
+                      index === navLinks.length - 1 && "border-b-[2px]"
                     }`}
                   >
                     {link}
                   </li>
                 ))}
-                <button className="mt-[24px] w-full border-[3px] rounded-[4px] text-white font-medium h-[48px] text-[20px] tracking-[2.3px] uppercase">
+                <button className="mt-[24px] h-[48px] w-full rounded-[4px] border-[3px] text-[20px] font-medium uppercase tracking-[2.3px] text-white">
                   Login
                 </button>
               </ul>
             </section>
 
-            <div className="flex gap-[40px] justify-center">
+            <div className="flex justify-center gap-[40px]">
               <img src="/icon-facebook.svg" alt="facebook-logo" />
               <img src="/icon-twitter.svg" alt="twitter-logo" />
             </div>
           </nav>
-          <div className="absolute top-0 left-0 right-0 h-[103px] bg-white" />
+          <div className="absolute left-0 right-0 top-0 h-[103px] bg-white" />
         </>
       )}
     </article>
