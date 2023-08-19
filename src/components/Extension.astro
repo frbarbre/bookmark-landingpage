@@ -1,0 +1,27 @@
+---
+import Title from './Title';
+import Paragraph from './Paragraph';
+import { extensionCards } from '@constants/index';
+import ExtensionCard from './ExtensionCard.astro';
+---
+
+<section class="pt-[130px] md:pt-[200px]">
+  <article class="flex flex-col md:gap-[36px] gap-[20px]">
+    <Title title="Download the extension" />
+    <Paragraph
+      text="We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize."
+    />
+  </article>
+  <section class="flex flex-col md:flex-row justify-center gap-[32px] md:pt-[55px] pt-[32px]">
+    {
+      extensionCards.map((extension, index) => (
+        <ExtensionCard
+          title={extension.title}
+          text={extension.text}
+          image={extension.image}
+          index={index}
+        />
+      ))
+    }
+  </section>
+</section>

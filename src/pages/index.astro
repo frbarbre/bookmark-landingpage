@@ -1,10 +1,18 @@
 ---
 import Layout from '@layouts/layout.astro';
-import Hero from "@components/Hero.astro"
-import Features from "@components/Features.astro"
+import Hero from '@components/Hero.astro';
+import Features from '@components/Features.astro';
+import Extension from '@components/Extension.astro';
+import Questions from '@components/Questions.astro';
+import Contact from '@components/Contact.astro';
 ---
 
 <Layout>
-  <Hero />
-  <Features />
+  <div class="px-[26px] max-w-[1440px] mx-auto">
+    <Hero />
+    <Features />
+    <Extension />
+    <Questions />
+  </div>
+  <Contact />
 </Layout>

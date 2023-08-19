@@ -1,0 +1,31 @@
+---
+import Title from './Title';
+import Paragraph from './Paragraph';
+import Button from './Button';
+import { questions } from '@constants/index';
+import Question from '@components/Question';
+---
+
+<section class="pt-[120px] md:pt-[245px] flex flex-col items-center">
+  <article class="flex flex-col md:gap-[36px] gap-[20px]">
+    <Title title="Frequently Asked Questions" />
+    <Paragraph
+      text="Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us."
+    />
+  </article>
+  <section class="border-t-neutral-gray/40 border-t max-w-[540px] mx-auto mt-[61px] pb-[53px] w-full">
+    {
+      questions.map((question) => (
+        <Question
+          question={question.question}
+          answer={question.answer}
+          client:visible
+        />
+      ))
+    }
+  </section>
+  <Button
+    text="More Info"
+    color="bg-primary-blue border-primary-blue text-white hover:text-primary-blue"
+  />
+</section>

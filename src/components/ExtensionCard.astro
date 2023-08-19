@@ -1,0 +1,35 @@
+---
+import Button from './Button';
+interface Props {
+  text: string;
+  title: string;
+  image: string;
+  index: number;
+}
+
+const { text, title, image, index } = Astro.props as Props;
+---
+
+<article
+  class={`shadow-lg w-full max-w-[300px] mx-auto md:mx-0 rounded-lg md:max-w-[284px] pt-[38px] pb-[20px] ${
+    index === 1
+      ? 'md:translate-y-[50px]'
+      : index === 2
+      ? 'md:translate-y-[100px]'
+      : ''
+  }`}
+>
+  <article class="px-[20px] flex flex-col items-center">
+    <img class="pb-[29px]" src={image} alt="logo" />
+    <h2 class="pb-[14px] text-neutral-blue font-medium md:text-[18px]">{title}</h2>
+    <p class="text-neutral-gray text-[14px]">{text}</p>
+  </article>
+  <img src="/bg-dots.svg" alt="" class="w-full h-[4px] object-cover mt-[33px] mb-[19px]">
+  <div class="px-[20px] w-full">
+    <Button
+      color="bg-primary-blue border-primary-blue text-white hover:text-primary-blue"
+      text="Add & Install Extension"
+      width="w-full"
+    />
+  </div>
+</article>
